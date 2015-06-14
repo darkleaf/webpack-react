@@ -1,4 +1,4 @@
 import React from 'react';
-import HelloMessage from 'app/component';
+import TodoApp from 'app/components/todo-app';
 
-React.render(<HelloMessage name="John 3" />, document.body);
+React.render(<TodoApp />, document.body);
