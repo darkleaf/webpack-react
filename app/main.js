@@ -1,5 +1,4 @@
-var React = require('react');
-var HelloMessage = require('./component');
+import React from 'react';
+import HelloMessage from 'app/component';
 
-
-React.render(React.createElement(HelloMessage, {name: "John"}), document.body);
+React.render(<HelloMessage name="John 3" />, document.body);
