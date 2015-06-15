@@ -1,0 +1,22 @@
+.item {
+    lost-utility: clearfix;
+    display: flex;
+}
+
+.item_check {
+    lost-column: 1/12;
+}
+
+.item_text {
+    lost-column: 11/12;
+}
+
+
+
+section {
+    height: 100%;
+}
+
+div {
+    lost-row: 1/;
+}

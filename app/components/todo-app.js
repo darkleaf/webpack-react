@@ -1,9 +1,5 @@
 import React from 'react';
-import mui, {AppBar, TextField} from 'material-ui';
-
-
-//import 'material-design-icons/sprites/css-sprite/sprite-navigation-white.css'
-
+import mui, {List, ListItem, ListDivider, Checkbox, TextField, Toolbar, ToolbarGroup, ToolbarSeparator, FontIcon, FlatButton} from 'material-ui';
 
 const ThemeManager = new mui.Styles.ThemeManager();
 
@@ -19,11 +15,22 @@ export default React.createClass({
   render: function() {
     return (
       <div>
-        <AppBar title='Title' />
+        <List>
+          <ListItem>All mail</ListItem>
+          <ListItem>All mail</ListItem>
 
-        <TextField
-          hintText="Hint Text" />
+          <ListDivider />
 
+          <ListItem leftCheckbox={<Checkbox />} style={{overflow: 'visible'}}>
+            Первая задача
+          </ListItem>
+          <ListItem leftCheckbox={<Checkbox />} style={{overflow: 'visible'}}>
+            Вторая задача
+          </ListItem>
+          <ListItem>
+            <TextField fullWidth hintText="Новая задача" />
+          </ListItem>
+        </List>
       </div>
     );
   }

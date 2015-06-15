@@ -1,6 +1,9 @@
 var path = require('path');
 var webpack = require('webpack');
 
+var lost = require('lost');
+var autoprefixer = require('autoprefixer-core');
+
 module.exports = {
   entry: {
     app: [
@@ -12,8 +15,9 @@ module.exports = {
   output: {
     publicPath: '/assets/',
     path: path.join(__dirname, 'build'),
-    filename: "bundle.js"
+    filename: 'bundle.js'
   },
+  //devtool: 'source-map',
   resolve: {
     root: __dirname
   },
@@ -23,14 +27,14 @@ module.exports = {
   ],
   module: {
     loaders: [
-      {
-        test: /\.js$/,
-        loaders: ['react-hot', 'babel'],
-        include: path.join(__dirname, 'app')
-      },
-      { test: /\.css$/, loader: "style!css" },
+      { test: /\.js$/, loaders: ['react-hot', 'babel'], include: path.join(__dirname, 'app') },
+      { test: /\.css$/, loaders: ['style', 'css', 'postcss'] },
       { test: /\.png$/, loader: "url?limit=100000" },
       { test: /\.jpg$/, loader: "file" }
     ]
-  }
+  },
+  postcss: [
+    lost,
+    autoprefixer({ browsers: ['last 2 version', 'chrome 25'] })
+  ]
 };
