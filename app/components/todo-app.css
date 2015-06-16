@@ -1,22 +1,31 @@
-.item {
+.container {
     lost-utility: clearfix;
-    display: flex;
 }
 
-.item_check {
-    lost-column: 1/12;
+.projectList {
+    lost-column: 1/5;
 }
 
-.item_text {
-    lost-column: 11/12;
+.project {
+    lost-column: 4/5;
 }
 
 
-
-section {
-    height: 100%;
+.todoItem {
+    lost-utility: clearfix;
 }
 
-div {
-    lost-row: 1/;
+.todoCheckbox {
+    lost-column: 5/6;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.todoTextField {
+    lost-column: 5/6;
+}
+
+.todoButtons {
+    lost-column: 1/6;
+    text-align: right;
 }

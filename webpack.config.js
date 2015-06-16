@@ -28,7 +28,7 @@ module.exports = {
   module: {
     loaders: [
       { test: /\.js$/, loaders: ['react-hot', 'babel'], include: path.join(__dirname, 'app') },
-      { test: /\.css$/, loaders: ['style', 'css', 'postcss'] },
+      { test: /\.css$/, loaders: ['style', 'css?module', 'postcss'] },
       { test: /\.png$/, loader: "url?limit=100000" },
       { test: /\.jpg$/, loader: "file" }
     ]
